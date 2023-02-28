@@ -1,7 +1,7 @@
 package pandemonium
 
 import (
-	"github.com/toolifelesstocode/eludris-api-types.go/oprish"
+	"github.com/eludris-community/eludris-api-types.go/oprish"
 )
 
 
