@@ -12,29 +12,29 @@ type Message struct {
 // Represents info about an instance.
 type InstanceInfo struct {
 	// The name of the connected Eludris instance.
-	Instance_Name string `json:"instance_name"`
+	InstanceName string `json:"instance_name"`
 	// The description of the connected Eludris instance. If provided, this must be within 1 and 2048 characters long.
 	Description string `json:"description"`
 	// The version of the connected Eludris instance.
 	Version string `json:"version"`
 	// The maximum allowed message content length.
-	Message_Limit string `json:"message_limit"`
+	MessageLimit string `json:"message_limit"`
 	// 	The url to this instance's REST api.
-	Oprish_Url string `json:"oprish_url"`
+	OprishUrl string `json:"oprish_url"`
 	// The url to this instance's gateway.
-	Pandemonium_Url string `json:"pandemonium_url"`
+	PandemoniumUrl string `json:"pandemonium_url"`
 	// The url to this instance's CDN.
-	Effis_Url string `json:"effis_url"`
+	EffisUrl string `json:"effis_url"`
 	// The maximum number of bytes for an asset.
-	File_Size int `json:"file_size"`
+	FileSize int `json:"file_size"`
 	// The maximum number of bytes for an attachment.
-	Attachment_File_Size int `json:"attachment_file_size"`
+	AttachmentFileSize int `json:"attachment_file_size"`
 }
 
 // Rate limits in Eludris fully depend on the instance's configuration.
 type RateLimitConf struct {
 	// The number of seconds the client should wait before making new requests.
-	Reset_After int `json:"reset_after"`
+	ResetAfter int `json:"reset_after"`
 	//The number of requests that can be made within the time frame denoted by `reset_after`.
 	Limit int `json:"limit"`
 }
@@ -56,20 +56,20 @@ type OprishRateLimits struct {
 	// The rate limit information for the `/` route.
 	Info RateLimitConf `json:"info"`
 	// The rate limit information for the `/messages` route.
-	Message_Create RateLimitConf `json:"message_create"`
+	MessageCreate RateLimitConf `json:"message_create"`
 	// The rate limit information for the `/rate_limits` route.
-	Rate_Limits RateLimitConf `json:"rate_limits"`
+	RateLimits RateLimitConf `json:"rate_limits"`
 }
 
 // Represents a singular rate limit for Effis (CDN).
 // Unlike normal rate limits, these also include a file size limit.
 type EffisRateLimitConf struct {
 	// The number of seconds the client should wait before making new requests.
-	Reset_After int `json:"reset_after"`
+	ResetAfter int `json:"reset_after"`
 	// The number of requests that can be made within the time frame denoted by `reset_after`.
 	Limit int `json:"limit"`
 	// The maximum number of bytes that can be uploaded in the time frame denoted by `reset_after`.
-	File_Size_Limit int `json:"file_size_limit"`
+	FileSizeLimit int `json:"file_size_limit"`
 }
 
 // Represents the rate limits for Effis.
