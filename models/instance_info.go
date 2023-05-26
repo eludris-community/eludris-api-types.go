@@ -20,4 +20,6 @@ type InstanceInfo struct {
 	FileSize int `json:"file_size"`
 	// The maximum number of bytes for an attachment.
 	AttachmentFileSize int `json:"attachment_file_size"`
+	// The rate limits that apply to the connected Eludris instance.
+	Ratelimits *InstanceRateLimits `json:"rate_limits"`
 }

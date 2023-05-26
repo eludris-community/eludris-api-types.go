@@ -23,11 +23,9 @@ type InstanceRateLimits struct {
 // This denotes the rate limits on each individual route.
 type OprishRateLimits struct {
 	// The rate limit information for the `/` route.
-	Info RateLimitConf `json:"info"`
+	Info RateLimitConf `json:"get_instance_info"`
 	// The rate limit information for the `/messages` route.
-	MessageCreate RateLimitConf `json:"message_create"`
-	// The rate limit information for the `/rate_limits` route.
-	RateLimits RateLimitConf `json:"rate_limits"`
+	MessageCreate RateLimitConf `json:"create_message"`
 }
 
 // Represents a singular rate limit for Effis (CDN).
@@ -48,4 +46,6 @@ type EffisRateLimits struct {
 	Assets EffisRateLimitConf `json:"assets"`
 	// The rate limit information for the handling of Attachments.
 	Attachments EffisRateLimitConf `json:"attachments"`
+	// The rate limit information for the handling of Files.
+	FetchFile EffisRateLimitConf `json:"fetch_file"`
 }
