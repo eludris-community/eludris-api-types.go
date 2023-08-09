@@ -1,7 +1,7 @@
 package pandemonium
 
 import (
-	"github.com/eludris-community/eludris-api-types.go/models"
+	"github.com/eludris-community/eludris-api-types.go/v2/models"
 )
 
 const (
