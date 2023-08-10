@@ -9,7 +9,7 @@ type InstanceInfo struct {
 	// The version of the connected Eludris instance.
 	Version string `json:"version"`
 	// The maximum allowed message content length.
-	MessageLimit string `json:"message_limit"`
+	MessageLimit int `json:"message_limit"`
 	// 	The url to this instance's REST api.
 	OprishUrl string `json:"oprish_url"`
 	// The url to this instance's gateway.
