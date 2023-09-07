@@ -2,11 +2,11 @@ package models
 
 // Represents a session payload on Oprish.
 type Session struct {
-	// The id of the session.
+	// The session’s ID.
 	Id string `json:"id"`
-	// The user ID of the session.
+	// The session user’s ID.
 	UserId string `json:"user_id"`
-	// The platform the session is on.
+	// The session’s platform (linux, windows, mac, etc.)
 	Platform string `json:"platform"`
 	// The client the session was created by.
 	Client string `json:"client"`
@@ -17,10 +17,11 @@ type Session struct {
 // Represents a created session payload on Oprish.
 type SessionCreate struct {
 	// The session user's identifier.
+	// This can be either their email or username.
 	Identifier string `json:"identifier"`
 	// The session user's password.
 	Password string `json:"password"`
-	// The session's platform.
+	// The session’s platform (linux, windows, mac, etc.)
 	Platform string `json:"platform"`
 	// The client the session was created by.
 	Client string `json:"client"`
@@ -29,6 +30,7 @@ type SessionCreate struct {
 // Represents a response to SessionCreate
 type SessionCreated struct {
 	// The session's token.
+	// This can be used by the user to properly interface with the API.
 	Token string `json:"token"`
 	// The session object that was created.
 	Session Session `json:"session"`
