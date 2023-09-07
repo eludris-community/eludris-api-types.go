@@ -9,6 +9,7 @@ const (
 	RatelimitOp     OpcodeType = "RATE_LIMIT"
 	HelloOp         OpcodeType = "HELLO"
 	AuthenticatedOp OpcodeType = "AUTHENTICATED"
+	UserUpdateOP    OpcodeType = "USER_UPDATE"
 	MessageCreateOp OpcodeType = "MESSAGE_CREATE"
 )
 
@@ -32,5 +33,7 @@ type Authenticated struct {
 	// The currently online users who are relavent to the connector.
 	Users []models.User `json:"users"`
 }
+
+type UserCreate models.UserCreate
 
 type MessageCreate models.Message
