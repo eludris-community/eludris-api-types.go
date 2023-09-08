@@ -80,7 +80,7 @@ type User struct {
 	// The user's (optional) display name.
 	// This field has to be between 2 and 32 characters long.
 	DisplayName *string `json:"display_name"`
-	// The user's social score credit.
+	// The user's social credit score.
 	SocialCredit *int `json:"social_credit"`
 	// The user's status.
 	Status Status `json:"status"`
