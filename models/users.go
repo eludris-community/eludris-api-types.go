@@ -15,7 +15,7 @@ type CreatePasswordRestCode struct {
 	Email string `json:"email"`
 }
 
-// Represents user-related stuff deletion on Oprish.
+// Represents deletion with user-related stuff on Oprish.
 type PasswordDeleteCredentials struct {
 	Password string `json:"password"`
 }
