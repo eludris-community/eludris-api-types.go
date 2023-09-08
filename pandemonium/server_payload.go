@@ -31,7 +31,7 @@ type Hello struct {
 
 type Authenticated struct {
 	User models.User `json:"user"`
-	// The currently online users who are relavent to the connector.
+	// The currently online users who are relevant to the connector.
 	Users []models.User `json:"users"`
 }
 
