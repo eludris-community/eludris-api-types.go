@@ -5,13 +5,13 @@ import (
 )
 
 const (
-	PongOp          OpcodeType = "PONG"
-	RatelimitOp     OpcodeType = "RATE_LIMIT"
-	HelloOp         OpcodeType = "HELLO"
-	AuthenticatedOp OpcodeType = "AUTHENTICATED"
-	UserUpdateOP    OpcodeType = "USER_UPDATE"
+	PongOp           OpcodeType = "PONG"
+	RatelimitOp      OpcodeType = "RATE_LIMIT"
+	HelloOp          OpcodeType = "HELLO"
+	AuthenticatedOp  OpcodeType = "AUTHENTICATED"
+	UserUpdateOP     OpcodeType = "USER_UPDATE"
 	PresenceUpdateOP OpcodeType = "PRESENCE_UPDATE"
-	MessageCreateOp OpcodeType = "MESSAGE_CREATE"
+	MessageCreateOp  OpcodeType = "MESSAGE_CREATE"
 )
 
 type Ratelimit struct {
@@ -38,7 +38,7 @@ type Authenticated struct {
 type UserCreate models.UserCreate
 
 type PresenceUpdate struct {
-	UserId int `json:"user_id"`
+	UserId int           `json:"user_id"`
 	Status models.Status `json:"status"`
 }
 
