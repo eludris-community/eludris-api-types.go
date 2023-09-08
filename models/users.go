@@ -3,10 +3,10 @@ package models
 type StatusType string
 
 const (
-	Online StatusType = "ONLINE"
+	Online  StatusType = "ONLINE"
 	Offline StatusType = "OFFLINE"
-	Idle StatusType = "IDLE"
-	Busy StatusType = "BUSY"
+	Idle    StatusType = "IDLE"
+	Busy    StatusType = "BUSY"
 )
 
 // Represents a payload resetting a user's password on Oprish.
@@ -33,9 +33,8 @@ type RestPassword struct {
 // Represents a user's status on Oprish.
 type Status struct {
 	Type StatusType `json:"type"`
-	Text *string `json:"text"`
+	Text *string    `json:"text"`
 }
-
 
 // Represents the user update payload on Oprish.
 type UpdateUser struct {
