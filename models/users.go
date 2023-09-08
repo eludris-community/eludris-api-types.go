@@ -30,7 +30,7 @@ type RestPassword struct {
 	Password string `json:"password"`
 }
 
-// A user's status.
+// Represents a user's status on Oprish.
 type Status struct {
 	Type StatusType `json:"type"`
 	Text *string `json:"text"`
