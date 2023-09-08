@@ -1,6 +1,6 @@
 package models
 
-// Represents a message sent to or received from Eludris. The message contains its author and content.
+// Represents a message received from Eludris. The message contains its author and content.
 type Message struct {
 	// The author of the message.
 	Author User `json:"author"`
