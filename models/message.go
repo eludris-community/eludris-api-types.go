@@ -6,14 +6,14 @@ type Message struct {
 	Author User `json:"author"`
 	// The content of the message. At least one character; the upper bound is set per-instance inside Eludris.toml.
 	// This upper bound can be requested as part of the instance's InstanceInfo.
-	Content string `json:"content"`
+	Content  string           `json:"content"`
 	Disguise *MessageDisguise `json:"_disguise"`
 }
 
 // Represents the message creation payload on Oprish.
 type MessageCreate struct {
 	// The message's content.
-	Content string `json:"content"`
+	Content  string           `json:"content"`
 	Disguise *MessageDisguise `json:"_disguise"`
 }
 
