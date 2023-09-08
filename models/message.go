@@ -19,7 +19,7 @@ type MessageCreate struct {
 
 // A temporary way to mask the message’s author’s name and avatar.
 type MessageDisguise struct {
-	// The name of the message's disguise
+	// The name of the message's disguise.
 	Name *string `json:"name"`
 	// The URL of the message's disguise
 	Avatar *string `json:"avatar"`
